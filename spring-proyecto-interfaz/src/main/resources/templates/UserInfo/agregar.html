@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head th:insert="~{componentes/head :: head}"></head>
+	<body class="bg bg-light">
+		<div class="container-xl">
+		<header class="sticky-top" th:insert="~{componentes/nav :: nav_ver}"></header>
+		  
+		  <div class="alert alert-info text-center" th:if="${info != null}" th:text="${info}"></div>
+		  <div class="alert alert-danger text-center" th:if="${danger}">Hubo un error al ingresar los datos, intentelo de nuevo</div>
+		  
+		  <h3 class="text-center my-3">
+			Agregar un nuevo <span class="text-dark" th:text="${rol}"></span>
+		  </h3>
+		  
+          <div th:if="${rol.equals('medico')}" th:insert="~{componentes/forms :: form_agregar_medico}"></div>
+		  <div th:if="${rol.equals('paciente')}" th:insert="~{componentes/forms :: form_agregar_paciente}"></div>
+		  
+	  		<footer th:insert="~{componentes/conclusion :: comp}"></footer>
+		</div>
+	</body>
+</html>

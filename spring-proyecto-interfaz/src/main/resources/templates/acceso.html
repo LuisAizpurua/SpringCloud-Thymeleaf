@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head th:insert="~{componentes/head :: head}"></head>
+
+<body>
+	<div class="container-sm">
+		<header class="sticky-top" th:insert="~{componentes/nav :: nav_acceso}"></header>
+		<div class="alert alert-primary text-center" th:if="${!listado.isEmpty() && eliminado}" >Eliminado con exito</div>
+		   
+		<h3 class="text-center mt-4" th:text="'Registro de ' + ${rol} + 's'"></h3>
+			<table class="table table-striped mt-5 pt-5 text-center border border-dark">
+				<thead th:include="componentes/table_head :: t_head"></thead>
+				<tbody>
+					<tr th:if="${listado != null}" th:each="lista : ${listado}">
+						<td th:text="${lista.nombre} + ' ' + ${lista.apellido}"></td>
+						<td><a class="bg bg-danger text-white p-2" th:href="@{/acceso/} + 'ver?id=' + ${lista.id} + '&rol=' + ${rol}" rol="button" th:text="'Ver'"></a></td>
+						<td><a class="bg bg-success text-white p-2" th:href="@{/acceso/editar} + '?id=' + ${lista.id} + '&rol=' +  ${rol}" rol="button" th:text="'Editar'"></a></td>
+						<td><a class="bg bg-dark text-white p-2 " th:href="@{/acceso/} + ${nombre} + '/eliminar?id=' + ${lista.id} + '&rol=' +  ${rol}" rol="button" th:text="'Eliminar'"></a></td>
+					</tr>	
+				</tbody> 
+			</table>
+			<div class="bg bg-secondary py-3 ps-5 mb-5 d-flex justify-content-start">
+				<a th:class="${listado.hasPrevious()}? 'rounded-4 p-2 mx-3 bg bg-dark text-white text-decoration-none d-absolute':'text-secondary bg-secondary'"  th:href="@{/acceso/pag(page=${listado.number - 1}, size=${listado.size} )} + '&rol=' + ${rol} + '&nombre=' + ${nombre} ">Anterior</a>
+				<a th:if="${!listado.last}" class="rounded-4 p-2 bg bg-dark text-white text-decoration-none" th:href="@{/acceso/pag(page=${listado.number + 1}, size=${listado.size} )} + '&rol=' + ${rol} + '&nombre=' + ${nombre} ">Siguiente</a>
+			</div>
+		<div class="alert alert-info mb-5 text-center" th:if="${listado.isEmpty()}">No hay registro</div>
+			<footer th:insert="~{componentes/conclusion :: comp}"></footer>
+		</div>
+		
+</body>
+</html>

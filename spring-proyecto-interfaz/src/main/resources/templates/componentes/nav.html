@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head th:include="componentes/head :: head"></head>
+<body>
+	
+	<!-- --------------------------------------------------- -->
+	<header th:fragment="nav_ver">
+		<nav class="bg-dark justify-content-md-center py-4">
+			<a class="text-decoration-none text-white mx-5" 
+			 th:href="@{/acceso}"
+			>&#x21D0; VOLVER</a>
+		</nav>
+	</header>
+	
+	<!-- --------------------------------------------------- -->
+	<header th:fragment="nav_crear">
+		<nav class="bg bg-dark justify-content-md-center py-4">
+			<a class="ms-5 text-decoration-none text-white" th:href="@{/}">&#x21D0; VOLVER</a>
+		</nav>
+	</header>	
+	
+	<!-- --------------------------------------------------- -->
+	<header th:fragment="nav_acceso">
+	<nav class="bg-dark py-3 text-white d-flex justify-content-between">
+				<div class="text-left ">
+					<span class="px-5"><a onclick="" class="text-decoration-none text-white" th:href="@{/}"  id="volver">&#x21D0; Volver</a></span>
+					<span><a class="text-decoration-none text-white" th:href="@{/acceso/agregar/} + ${rol}" id="agregar">Agregar</a></span>
+				</div>	
+				<div>	
+					<span class="material-symbols-outlined">Person</span>
+					<label class="me-5 text-primary" th:text="${nombre}"></label>
+				</div>
+		</nav>
+	</header>
+</body>
+</html>

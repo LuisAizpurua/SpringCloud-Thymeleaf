@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head th:insert="~{componentes/head :: head}"></head>
+	<body class="bg bg-light">
+		<div class="container-xl">
+		<header class="sticky-top" th:include="componentes/nav :: nav_ver"></header>
+		
+       <div th:if="${rol == 'paciente'}" th:include="componentes/body_ver :: ver_paciente" class="m-5 p-5 text-center border border-dark bg-primary" ></div>
+	   <div th:if="${rol == 'medico'}" th:include="componentes/body_ver :: ver_medico"  class="m-5 p-5 text-center border border-dark bg-primary" ></div>
+	   
+		<footer th:include="componentes/conclusion :: comp"></footer>
+		</div>
+	</body>
+</html>

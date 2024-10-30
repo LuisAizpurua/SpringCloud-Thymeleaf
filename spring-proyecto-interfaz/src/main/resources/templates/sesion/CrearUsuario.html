@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head th:insert="~{componentes/head :: head}"></head>
+	<body>
+		
+	<div class="container">
+		
+		<header th:insert="~{componentes/nav :: nav_crear}"></header>
+		
+		<div class="alert alert-primary" th:if="${primary != null}" th:text="${primary}"></div>
+		<div class="alert alert-danger" th:if="${sucess != null}" th:text="${sucess}"></div>
+		
+		<div class="container-sm" th:insert="~{componentes/forms :: form_crear}"></div> 
+		
+	</div>
+		
+	</body> 
+</html> 

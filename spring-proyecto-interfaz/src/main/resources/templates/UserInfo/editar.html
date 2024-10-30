@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head th:insert="~{componentes/head :: head}"></head>
+	<body class="bg bg-light">
+		<div class="container-xl">
+		<header class="sticky-top" th:insert="~{componentes/nav :: nav_ver}"></header>
+	    <div class="alert alert-info text-center" th:if="${info}">Actualizado con exito</div>		
+		
+		  <h3 th:if="${rol.equals('medico')}" class="text-center my-3">
+			Actualizar los datos del medico: <ins class="text-primary" th:text="${medico.nombre + ' ' + medico.apellido}"></ins>
+		  </h3>
+		  <h3 th:if="${rol.equals('paciente')}" class="text-center my-3">
+		    Actualizar los datos del paciente: <ins class="text-primary" th:text="${paciente.nombre + ' ' + paciente.apellido}"></ins>
+		  </h3>
+		  
+		  
+          <div th:if="${rol.equals('medico')}" th:insert="~{componentes/forms :: form_editar_medico}"></div>
+		  <div th:if="${rol.equals('paciente')}" th:insert="~{componentes/forms :: form_editar_paciente}"></div>
+		  
+	  		<footer th:insert="~{componentes/conclusion :: comp}"></footer>
+		</div>
+	</body>
+</html>

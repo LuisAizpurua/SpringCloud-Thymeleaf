@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head th:insert="~{componentes/head :: head}"></head>
+<body>
+	<!-- ----------------------------------- -->
+     <thead th:fragment="t_head">
+		<tr>
+			<th class="bg-secondary text-white">Usuario</th>
+			<th class="bg-secondary text-white">Agregar</th>
+			<th class="bg-secondary text-white">Editar</th>
+			<th class="bg-secondary text-white">Eliminar</th>
+		</tr>
+	</thead>
+	
+	<!-- ----------------------------------- -->
+	 <thead th:fragment="th_ver_paciente">
+		<tr>
+			<th class="bg-secondary text-white">Edad</th>
+			<th class="bg-secondary text-white">Cedula</th>
+			<th class="bg-secondary text-white">Telefono</th>
+			<th class="bg-secondary text-white">Direccion</th>
+			<th class="bg-secondary text-white">Provincia</th>
+			<th class="bg-secondary text-white">Sexo</th>
+		</tr>
+	</thead>
+	
+	<!-- ----------------------------------- -->
+	 <thead th:fragment="th_ver_medico">
+		<tr>
+			<th class="bg-secondary text-white">Cedula</th>
+			<th class="bg-secondary text-white">Telefono</th>
+			<th class="bg-secondary text-white">Direccion</th>
+			<th class="bg-secondary text-white">Especialidad</th>
+			<th class="bg-secondary text-white">Pacientes Al Mes</th>
+			<th class="bg-secondary text-white">Pacientes Anual</th>
+		</tr>
+	</thead>
+</body>
+</html>

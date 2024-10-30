@@ -1,0 +1,8 @@
+insert into pacientes (edad, apellido, cedula, direccion, nombre, provincia, sexo, telefono, foto) values (40,'Lopez','9-789-1234','Bella Vista', 'Maria', 'Veraguas', 'F', '61234456', '');
+insert into pacientes (edad, apellido, cedula, direccion, nombre, provincia, sexo, telefono, foto) values (23,'Ortega','8-546-136', 'El ingenio', 'Hector', 'Panama', 'M', '67383444', '');
+insert into pacientes (edad, apellido, cedula, direccion, nombre, provincia, sexo, telefono, foto) values (23,'Ortega','8-546-136', 'El ingenio', 'Hector', 'Panama', 'M', '67383444', '');
+insert into pacientes (edad, apellido, cedula, direccion, nombre, provincia, sexo, telefono, foto) values (35,'Castro','8-0993-656', 'Las cumbres', 'Luisa', 'Panama', 'F', '68843493','');
+insert into pacientes (edad, apellido, cedula, direccion, nombre, provincia, sexo, telefono, foto) values (61,'Medica','4-757-4321', 'San miguelito', 'Jose', 'Chiriqui', 'M', '68004944','');
+insert into pacientes (edad, apellido, cedula, direccion, nombre, provincia, sexo, telefono, foto) values (57,'Sanchez','8-228-0994', 'Villa lucre', 'Luis', 'Panama', 'M', '60297353','');
+insert into pacientes (edad, apellido, cedula, direccion, nombre, provincia, sexo, telefono, foto) values (38,'Batista','4-107-4902', 'San miguelito', 'Luis', 'Chiriqui', 'M', '62304944','');
+insert into pacientes (edad, apellido, cedula, direccion, nombre, provincia, sexo, telefono, foto) values (45,'Ceballos','3-462-1124', 'Villa lucre', 'Felix', 'Panama', 'M', '60299033','');
